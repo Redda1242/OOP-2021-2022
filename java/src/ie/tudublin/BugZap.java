@@ -9,6 +9,7 @@ public class BugZap extends PApplet{
     float playerWidth;
     float h;
     float bugX, bugY, bugWidth;
+    int score;
 
     public void settings()
 	{
@@ -22,6 +23,7 @@ public class BugZap extends PApplet{
         playerX = width/2;
         playerY = height - 50;
         playerWidth = 50;
+        score = 0;
 
         resetBug();
 		
@@ -63,6 +65,8 @@ public class BugZap extends PApplet{
         {
             moveBug();
         }
+
+        text("score" + score, 50, 50);
         
     }
 
@@ -85,7 +89,15 @@ public class BugZap extends PApplet{
 		}
 		if (key == ' ')
 		{
-			line(playerX, playerY, playerX, 0);
+			float halfW = bugWidth/2;
+            if(playerX > bugX - halfW &&playerX < bugX +halfW)
+            {
+                score++;
+                resetBug();
+                line(playerX, playerY - 10, playerX, bugY);
+
+            }
+            
 		}
 	}
 
