@@ -53,7 +53,23 @@ public class Loops extends PApplet
 				break;
 			case 1:
 				
-			
+				cx = 0;
+				cy = 0;
+				int red;
+				int green;
+				int blue;
+
+				rectMode(CORNER);
+				noStroke();
+				fill(50, 255,255);
+				for ( red = 0; red < 256; red+=25) {
+					for ( green = 0; green < 256; green+=25)
+						for ( blue = 0; blue < 256; blue+=25)
+							fill(red, green, blue);
+					rect(cx, cy, width/10 , height);
+					cx += 50;
+					
+				}
 				break;
 		}
 	}
