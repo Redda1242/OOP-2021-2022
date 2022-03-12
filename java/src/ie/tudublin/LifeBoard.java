@@ -5,8 +5,12 @@ import processing.core.PApplet;
 public class LifeBoard {
     boolean[][] board;
     boolean[][] next;
+    
+    //size of board
     int size;
     float cellSize;
+    
+    //pass papplet as a parameter
     PApplet pa;
 
     public LifeBoard(int size, PApplet pa)
