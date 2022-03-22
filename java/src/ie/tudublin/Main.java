@@ -78,9 +78,9 @@ public class Main
     }
     public static void main(String[] args)
     {
-        audio1();
+        //audio1();
 
-        colorfulLife();
+        //colorfulLife();
         audio2();
 
         // Tara Misty
